@@ -90,3 +90,69 @@
   background-color: #e8e8e8;
   color: lightsalmon;
 }
+
+.rooms-preview {
+  margin: 2rem;
+}
+
+.rooms-preview h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.room-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.room-card {
+  padding: 2rem;
+  background: white;
+  color: black;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
+}
+
+.standard:hover {
+  box-shadow: 0 0 75px rgba(70, 130, 255, 0.7);
+}
+
+.deluxe:hover {
+  box-shadow: 0 0 75px rgba(180, 80, 255, 0.7);
+}
+
+.luminous:hover {
+  box-shadow: 0 0 75px rgba(255, 170, 70, 0.8);
+}
+
+.room-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.room-card h3,
+.room-card p {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.room-card h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.room-card p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
