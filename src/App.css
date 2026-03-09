@@ -88,7 +88,7 @@
 
 .hero-button:hover {
   background-color: #e8e8e8;
-  color: lightsalmon;
+  color: #d4af37;
 }
 
 .rooms-preview {
@@ -155,4 +155,90 @@
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 0rem 2rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d4af37;
+}
+
+.footer-contact,
+.footer-links,
+.footer-logo {
+  flex: 1;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+.footer-contact a {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 0.5rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.footer-contact a:hover {
+  color: #d4af37;
+  opacity: 0.95;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+  opacity: 0.95;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: white;
 }
