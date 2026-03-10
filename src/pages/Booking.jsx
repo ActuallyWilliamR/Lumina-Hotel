@@ -3,16 +3,23 @@ import { useState } from "react"
 function Booking() {
 
   const [name, setName] = useState("")
-  const [date, setDate] = useState("")
+  const [checkIn, setCheckIn] = useState("")
+  const [checkOut, setCheckOut] = useState("")
   const [roomType, setRoomType] = useState("Standard")
   const [bookingConfirmed, setBookingConfirmed] = useState(false)  
 
   const handleSubmit = (e) =>  {
     e.preventDefault()
 
+    if (checkOut < checkIn) {
+      alert("Check-out date must be after Check-in date.")
+      return
+    }
+
     const booking = {
       name,
-      date,
+      checkIn,
+      checkOut,
       roomType
     }
 
@@ -21,49 +28,68 @@ function Booking() {
   }
 
   return (
-    <section>
-      <h1>Book Your Stay</h1>
+    <section className="booking-section">
+      <div className="booking-container">
 
-      {bookingConfirmed ? (
-        <p>Booking Confirmed!</p>
-      ) : (
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
+        <h1>Book Your Stay</h1>
 
-        <div>
-          <label htmlFor="date">Date</label>
-          <input
-            type="date"
-            id="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-        </div>
+        {bookingConfirmed ? (
+          <p className="booking-confirmation">Booking Confirmed!</p>
+        ) : (
+        <form className="booking-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Full Name</label>
+            <input
+              required
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
 
-        <div>
-          <label htmlFor="roomType">Room Type</label>
-          <select 
-          id="roomType"
-          value={roomType}
-          onChange={(e) => setRoomType(e.target.value)}
-          >
-            <option value="Standard">Standard</option>
-            <option value="Deluxe">Deluxe</option>
-            <option value="Suite">Suite</option>
-          </select>
-        </div>
+          <div className="date-row">
+            <div className="date-card">
+              <label htmlFor="checkIn">Check-In</label>
+              <input
+                required
+                type="date"
+                id="checkIn"
+                value={checkIn} 
+                onChange={(e) => setCheckIn(e.target.value)}
+              />
+            </div>
 
-        <button type="submit">Book</button>
-      </form>
-      )}
+            <div className="date-card">
+              <label htmlFor="checkOut">Check-Out</label>
+              <input
+                required
+                type="date"
+                id="checkOut"
+                value={checkOut}
+                onChange={(e) => setCheckOut(e.target.value)}
+              />
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="roomType">Room Type</label>
+            <select
+            id="roomType"
+            value={roomType}
+            onChange={(e) => setRoomType(e.target.value)}
+            >
+              <option value="Standard">Standard</option>
+              <option value="Deluxe">Deluxe</option>
+              <option value="Suite">Suite</option>
+            </select>
+          </div>
+
+          <button type="submit" className="booking-button">Book</button>
+        </form>
+        )}
+      </div>
+      
     </section>
   )
 }
