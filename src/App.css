@@ -1,16 +1,27 @@
-#root {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+.main {
+  flex: 1;
 }
 
 .navbar {
   width: 100%;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #111;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  transition: transform 0.75s ease;
+
+  position: fixed;
+  z-index: 10;
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+.navbar.show {
+  transform: translateY(0);
 }
 
 .logo {
@@ -109,8 +120,9 @@
 
 .room-card {
   padding: 2rem;
-  background: white;
-  color: black;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: white;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -170,6 +182,7 @@
 .booking-container {
   width: 100%;
   max-width: 700px;
+  margin-top: 72px;
   padding: 2.5rem;
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -278,6 +291,7 @@
   color: white;
   padding: 0rem 2rem 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto;
 }
 
 .footer-top {

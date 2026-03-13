@@ -1,7 +1,9 @@
 function Rooms() {
   return (
   <>
-    <h1>Our Rooms</h1>
+    <main>
+      <h1>Our Rooms</h1>
+    </main>
   </>
   )
 }
