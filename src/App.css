@@ -2,6 +2,10 @@
   flex: 1;
 }
 
+.page-content {
+  flex: 1;
+}
+
 .navbar {
   width: 100%;
   padding: 0.5rem 2rem;
@@ -40,7 +44,7 @@
   gap: 2rem;
 }
 
-.nav-links a{
+.nav-links a {
   color: white;
   font-weight: 500;
   transition: opacity 0.2s;
@@ -51,18 +55,19 @@
 }
 
 .hero {
-  min-height: 70vh;
+  min-height: 100dvh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 4rem 2rem;
+  color: white;
+
   background:
     linear-gradient(rgba(20, 20, 20, 0.55), rgba(20, 20, 20, 0.55)),
-    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=80")
-    center/cover no-repeat;
-  color: white;
-  text-align: center;
+    url("../src/assets/HomeHero.webp")
+    center/ cover no-repeat;
 }
 
 .hero-content {
@@ -170,13 +175,12 @@
 }
 
 .booking-section {
+  min-height: 86vh;
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
-  background: 
-  linear-gradient(rgba(15, 15, 15, 0.45), rgba(15, 15, 15, 0.45)),
-    url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80")
-    center/cover no-repeat;
+
+  background: radial-gradient(circle at top left, rgba(169, 169, 169, 0), rgba(169, 169, 169, 0.3));
 }
 
 .booking-container {
