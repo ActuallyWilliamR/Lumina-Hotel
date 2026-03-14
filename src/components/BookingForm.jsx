@@ -3,6 +3,8 @@ import { useState } from "react"
 function Booking() {
 
   const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState ("")
   const [checkIn, setCheckIn] = useState("")
   const [checkOut, setCheckOut] = useState("")
   const [roomType, setRoomType] = useState("Standard")
@@ -18,6 +20,8 @@ function Booking() {
 
     const booking = {
       name,
+      email,
+      phoneNumber,
       checkIn,
       checkOut,
       roomType
@@ -45,6 +49,28 @@ function Booking() {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              required
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="phoneNumber">Phone Number</label>
+            <input
+              required
+              type="text"
+              id="phoneNumber"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
           </div>
 
