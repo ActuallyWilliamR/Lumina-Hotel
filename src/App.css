@@ -174,6 +174,88 @@
   line-height: 1.6;
 }
 
+.roomPageContainer {
+  margin-top: 7rem;
+}
+
+.standardRoomDescription {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  margin: 3rem;
+
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(70, 130, 255, 0.7);
+}
+
+.standardRoomDescription img {
+  width: 35%;
+  object-fit: cover;
+  display: block;
+
+  border-radius: 8px;
+}
+
+.standardRoomDescriptionText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.deluxeRoomDescription {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  margin: 3rem;
+
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(180, 80, 255, 0.7);
+}
+
+.deluxeRoomDescription img {
+  width: 35%;
+  object-fit: cover;
+  display: block;
+
+  border-radius: 8px;
+}
+
+.deluxeRoomDescriptionText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.luminousRoomDescription {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  margin: 3rem;
+
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255, 170, 70, 0.8);
+}
+
+.luminousRoomDescription img {
+  width: 35%;
+  object-fit: cover;
+  display: block;
+
+  border-radius: 8px;
+}
+
+.luminousRoomDescriptionText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
 .booking-section {
   min-height: 86vh;
   padding: 4rem 2rem;
@@ -400,10 +482,42 @@
     font-size: 1rem;
   }
 
-    /* ROOMS */
+    /* ROOMS PREVIEW */
 
   .room-cards {
     grid-template-columns: 1fr;
+  }
+
+    /* ROOM DESCRIPTION */
+
+  .standardRoomDescription {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .standardRoomDescription img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .deluxeRoomDescription {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .deluxeRoomDescription img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .luminousRoomDescription {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .luminousRoomDescription img {
+    width: 100%;
+    height: 220px;
   }
 
     /* BOOKING */
