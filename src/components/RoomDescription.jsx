@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-
 import StandardRoom from "../assets/StandardBG.webp"
 import DeluxeRoom from "../assets/DeluxeBG.webp"
 import LuminousRoom from "../assets/LuminousBG.webp"
