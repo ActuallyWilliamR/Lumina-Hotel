@@ -387,22 +387,15 @@
 }
 
 .footer-top {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   border-bottom: 1px solid #d4af37;
 }
 
-.footer-contact,
-.footer-links,
-.footer-logo {
-  flex: 1;
-}
-
 .footer-contact {
-  display: flex;
-  flex-direction: column;
-  margin-right: -7rem;
+  flex: 1;
+  margin: 1rem;
 }
 
 .footer-contact p {
@@ -429,9 +422,9 @@
 }
 
 .footer-logo {
-  display: flex;
-  justify-content: left;
-  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer-logo img {
@@ -482,6 +475,11 @@
 
     /* ROOM DESCRIPTION */
 
+  .roomPageContainer {
+    padding-top: 7rem;
+    margin: 0;
+  }
+
   .standardRoomDescription {
     flex-direction: column;
     text-align: center;
@@ -526,11 +524,12 @@
 
   .footer-top {
     flex-direction: column;
-    gap: 1.5rem;
     text-align: center;
+    gap: 2rem;
   }
 
-  .footer-links {
-    align-items: center;
+  .footer-logo {
+    position: static;
+    transform: none;
   }
 }
