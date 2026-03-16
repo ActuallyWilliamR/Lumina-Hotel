@@ -24,11 +24,6 @@ function Footer() {
             loading="lazy"
           />
         </div>
-
-        <nav className="footer-links">
-          <Link to="/about">About us</Link>
-          <Link to="/contact">Contact us</Link>
-        </nav>
       </div>
 
       <div className="footer-bottom">
