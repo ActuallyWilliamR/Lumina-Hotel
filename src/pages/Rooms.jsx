@@ -1,7 +1,9 @@
+import RoomDescription from "../components/RoomDescription"
+
 function Rooms() {
   return (
   <>
-    <h1>Our Rooms</h1>
+    <RoomDescription />
   </>
   )
 }
