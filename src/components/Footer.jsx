@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import logo200 from "../assets/LuminaHotelLogo-200px.webp"
 import logo400 from "../assets/LuminaHotelLogo-400px.webp"
 
