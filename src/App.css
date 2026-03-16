@@ -68,6 +68,8 @@
     linear-gradient(rgba(20, 20, 20, 0.55), rgba(20, 20, 20, 0.55)),
     url("../src/assets/HomeHero.webp")
     center/ cover no-repeat;
+  
+    border-bottom: 1px solid #ccc ;
 }
 
 .hero-content {
@@ -415,6 +417,10 @@
 .footer-contact a:hover {
   color: #d4af37;
   opacity: 0.95;
+}
+
+.footer-contact .bold {
+  font-weight: 750;
 }
 
 .footer-logo {
