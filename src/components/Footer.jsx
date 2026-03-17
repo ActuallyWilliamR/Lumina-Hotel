@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import logo200 from "../assets/LuminaHotelLogo-200px.webp"
 import logo400 from "../assets/LuminaHotelLogo-400px.webp"
 
@@ -24,11 +23,6 @@ function Footer() {
             loading="lazy"
           />
         </div>
-
-        <nav className="footer-links">
-          <Link to="/about">About us</Link>
-          <Link to="/contact">Contact us</Link>
-        </nav>
       </div>
 
       <div className="footer-bottom">

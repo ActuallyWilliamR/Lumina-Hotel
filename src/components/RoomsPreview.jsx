@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom"
 
+import StandardRoom from "../assets/StandardBG.webp"
+import DeluxeRoom from "../assets/DeluxeBG.webp"
+import LuminousRoom from "../assets/LuminousBG.webp"
+
 function RoomsPreview() {
     return (
     <section className="rooms-preview">
@@ -9,19 +13,13 @@ function RoomsPreview() {
         <div className="room-cards">
 
             <Link to="/rooms" className="room-card standard">
-                <img
-                  src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80"
-                  alt="Standard room"
-                />
+                <img src={StandardRoom} alt="Standard Room Image" />
                 <h3>Standard</h3>
                 <p>Simple, comfortable. Perfect for a good nights sleep.</p>
             </Link>
 
             <Link to="/rooms" className="room-card deluxe">
-                <img
-                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80"
-                  alt="Deluxe room"
-                />
+                <img src={DeluxeRoom} alt="Deluxe Room Image" />
                 <h3>Deluxe</h3>
                 <p>
                     Enjoy our spacious Deluxe Room with a stunning ocean view and a king-size bed. 
@@ -30,10 +28,7 @@ function RoomsPreview() {
             </Link>
 
             <Link to="/rooms" className="room-card luminous">
-                <img
-                  src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80"
-                  alt="Luminous Suite"
-                />
+                <img src={LuminousRoom} alt="Luminous Room Image" />
                 <h3>Luminous Suite</h3>
                 <p>
                     Stay above it all in the Luminous Suite, 
